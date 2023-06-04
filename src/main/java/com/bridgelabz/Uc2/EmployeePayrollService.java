@@ -1,10 +1,8 @@
-package com.bridgelabz;
+package com.bridgelabz.Uc2;
 
-import com.bridgelabz.Uc2.EmployeePayroll;
-
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 
 public class EmployeePayrollService {
@@ -12,9 +10,8 @@ public class EmployeePayrollService {
 
     public EmployeePayrollService(List<EmployeePayroll> employeePayRollList) {
         this.employeePayRollList = employeePayRollList;
-
     }
-    public void EmployeePayrollService() {
+    public EmployeePayrollService() {
     }
     public void readEmployeePayRollData(Scanner scannerReader) {
 
@@ -33,12 +30,11 @@ public class EmployeePayrollService {
     }
     public static void main(String[] args) {
 
-        ArrayList<EmployeePayroll> employeePayrollList = new ArrayList<>();
-        EmployeePayrollService employeePayRollService = new EmployeePayrollService(employeePayrollList);
+        ArrayList<EmployeePayroll> employeePayRollList = new ArrayList<>();
+        EmployeePayrollService employeePayRollService = new EmployeePayrollService(employeePayRollList);
         Scanner scannerReader = new Scanner(System.in);
         employeePayRollService.readEmployeePayRollData(scannerReader);
         employeePayRollService.writeEmployeePayRollData();
     }
 }
-
 
